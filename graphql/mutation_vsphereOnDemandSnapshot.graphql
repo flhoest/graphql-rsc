@@ -1,0 +1,12 @@
+mutation TriggerVsphereSnapshot(
+    $input: VsphereOnDemandSnapshotInput!
+)
+{
+    vsphereOnDemandSnapshot(
+        input: $input
+    )
+    {
+        id
+        status
+    }
+}
