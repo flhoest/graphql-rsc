@@ -28,7 +28,7 @@ function rkGetRequestStatus(
     }
 
     $graphqlFile = __DIR__
-        . '/../graphql/query_vsphereVMAsyncRequestStatus.graphql';
+        . '/../graphql/GetVsphereVMAsyncRequestStatus.graphql';
 
     $variables = [
         'id' => $requestId,

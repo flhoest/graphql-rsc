@@ -19,6 +19,33 @@ declare(strict_types=1);
  */
 
 
+/*
+                 __________        ___.            .__  __
+                 \______   \ __ __ \_ |__  _______ |__||  | __
+                  |       _/|  |  \ | __ \ \_  __ \|  ||  |/ /
+                  |    |   \|  |  / | \_\ \ |  | \/|  ||    <
+                  |____|_  /|____/  |___  / |__|   |__||__|_ \
+                         \/               \/                    PHP Framework
+*/
+
+
+// Function index in alphabetical order (total 12)
+//-------------------------------------------------
+
+// rkDecodeJsonResponse($responseBody, $url)
+// rkExecuteGraphQL($query, $variables = [], $operationName = null, $configuration = null)
+// rkExecuteGraphQLFile($graphqlFile, $variables = [], $operationName = null, $configuration = null)
+// rkExtractApiErrorMessage($decodedBody, $rawBody)
+// rkFormatGraphQLErrors($errors)
+// rkGetNestedValue($data, $path, $default = null)
+// rkHttpPostJson($url, $payload, $additionalHeaders = [], $configuration = null)
+// rkLoadConfiguration($configurationFile = null)
+// rkNormalizeBoolean($value, $name)
+// rkNormalizePositiveInteger($value, $name)
+// rkRscClearTokenCache()
+// rkRscGetToken($forceRefresh = false, $configuration = null)
+
+
 const RK_RSC_DEFAULT_CONNECT_TIMEOUT = 30;
 const RK_RSC_DEFAULT_REQUEST_TIMEOUT = 120;
 const RK_RSC_TOKEN_EXPIRY_MARGIN = 60;
@@ -117,6 +144,16 @@ function rkLoadConfiguration(
     $configuration['verify_ssl'] = rkNormalizeBoolean(
         $configuration['verify_ssl'] ?? true,
         'verify_ssl'
+    );
+
+
+    /*
+     * Restore submission is disabled by default. Set this value to false
+     * explicitly in the local configuration to enable a live restore.
+     */
+    $configuration['restore_dry_run'] = rkNormalizeBoolean(
+        $configuration['restore_dry_run'] ?? true,
+        'restore_dry_run'
     );
 
 

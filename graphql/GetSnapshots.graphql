@@ -1,0 +1,19 @@
+query GetSnapshots(
+    $workloadId: String!
+    $first: Int!
+)
+{
+    snapshotOfASnappableConnection(
+        workloadId: $workloadId
+        first: $first
+        sortOrder: DESC
+    )
+    {
+        nodes
+        {
+            id
+            date
+            expirationDate
+        }
+    }
+}

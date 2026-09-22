@@ -1,0 +1,18 @@
+query GetVsphereVMs(
+    $first: Int!
+)
+{
+    snappableConnection(
+        filter: {
+            objectType: VmwareVirtualMachine
+        }
+        first: $first
+    )
+    {
+        nodes
+        {
+            name
+            fid
+        }
+    }
+}

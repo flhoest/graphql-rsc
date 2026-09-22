@@ -1,0 +1,15 @@
+query GetClusters(
+    $first: Int!
+)
+{
+    clusterConnection(
+        first: $first
+    )
+    {
+        nodes
+        {
+            id
+            name
+        }
+    }
+}
