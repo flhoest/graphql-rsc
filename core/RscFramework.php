@@ -1,31 +1,18 @@
 <?php
-
-
 declare(strict_types=1);
 
-
 /*
- * Rubrik Security Cloud PHP Framework
- *
- * This file centralizes:
- * - Configuration loading
- * - OAuth2 client credential authentication
- * - In-memory access-token caching
- * - Generic HTTP POST requests
- * - GraphQL query and mutation execution
- * - Consistent response and error handling
- *
- * Compatible with PHP 8.1 and later.
- */
-
-
 /*
-                 __________        ___.            .__  __
-                 \______   \ __ __ \_ |__  _______ |__||  | __
-                  |       _/|  |  \ | __ \ \_  __ \|  ||  |/ /
-                  |    |   \|  |  / | \_\ \ |  | \/|  ||    <
-                  |____|_  /|____/  |___  / |__|   |__||__|_ \
-                         \/               \/                    PHP Framework
+           Rubrik Security Cloud PHP Framework
+           __________        ___.            .__  __
+           \______   \ __ __ \_ |__  _______ |__||  | __
+            |       _/|  |  \ | __ \ \_  __ \|  ||  |/ /
+            |    |   \|  |  / | \_\ \ |  | \/|  ||    <
+            |____|_  /|____/  |___  / |__|   |__||__|_ \
+                   \/               \/      PHP Framework
+
+           (c) 2026 - Frederic Lhoest - https://www.lets-talk-about.tech/
+
 */
 
 
